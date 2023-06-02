@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'jogo-da-velha-board',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss'],
 })
 export class BoardComponent implements OnInit{
+  @Input() value: 'X' | 'O' | null = null;
   squares: any[] | undefined;
   xIsNext: boolean | undefined;
   winner: string | undefined;
