@@ -1,0 +1,16 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+app-square {
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 0.25rem;
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
