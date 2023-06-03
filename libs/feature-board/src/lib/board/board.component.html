@@ -7,7 +7,7 @@
 </h2>
 
 <main>
-    <jogo-da-velha-square *ngFor="let value of squares; let i = index"
+    <jogo-da-velha-square class="board-square" *ngFor="let value of squares; let i = index"
     [value]="value"
     (click)="makeMove(i)">
     </jogo-da-velha-square>

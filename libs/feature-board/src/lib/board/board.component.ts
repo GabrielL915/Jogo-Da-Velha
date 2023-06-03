@@ -11,21 +11,21 @@ export class BoardComponent implements OnInit{
   xIsNext: boolean | undefined;
   winner: string | undefined;
 
-  ngOnInit() {
+  public ngOnInit() {
     this.newGame();
   }
 
-  newGame() {
+  public newGame() {
     this.squares = Array(9).fill(null);
     this.winner = undefined;
     this.xIsNext = true;
   }
 
-  get player() {
+  public get player() {
     return this.xIsNext ? 'X' : 'O';
   }
 
-  makeMove(idx: number) {
+  public makeMove(idx: number) {
     if (!this.squares || this.winner) {
       return;
     }
@@ -36,7 +36,7 @@ export class BoardComponent implements OnInit{
     this.winner = this.calculateWinner();
   }
 
-  calculateWinner() {
+  public calculateWinner() {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
